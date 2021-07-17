@@ -1,0 +1,11 @@
+{
+  "name": "Google Sheets to JSON",
+  "description": "Build an Extension!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup/index.html"
+  },
+  "options_page": "options/index.html"
+}
