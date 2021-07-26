@@ -9,10 +9,11 @@
     "fs-extra": "^10.0.0",
     "globby": "^11.0.4",
     "ts-node": "^10.1.0",
+    "tsconfig-paths": "^3.10.1",
     "typescript": "^4.3.5"
   },
   "scripts": {
-    "deploy": "ts-node deploy.ts && tsc --build",
+    "deploy": "ts-node deploy.ts  && tsc --build",
     "build": "webpack",
     "watch": "tsc --watch"
   }

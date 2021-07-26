@@ -1,0 +1,483 @@
+{
+  "version": "1.0",
+  "encoding": "UTF-8",
+  "feed": {
+    "xmlns": "http://www.w3.org/2005/Atom",
+    "xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
+    "xmlns$gsx": "http://schemas.google.com/spreadsheets/2006/extended",
+    "id": {
+      "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values"
+    },
+    "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+    "category": [
+      {
+        "scheme": "http://schemas.google.com/spreadsheets/2006",
+        "term": "http://schemas.google.com/spreadsheets/2006#list"
+      }
+    ],
+    "title": { "type": "text", "$t": "Sheet1" },
+    "link": [
+      {
+        "rel": "alternate",
+        "type": "application/atom+xml",
+        "href": "https://docs.google.com/spreadsheets/u/0/d/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/pubhtml"
+      },
+      {
+        "rel": "http://schemas.google.com/g/2005#feed",
+        "type": "application/atom+xml",
+        "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values"
+      },
+      {
+        "rel": "http://schemas.google.com/g/2005#post",
+        "type": "application/atom+xml",
+        "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values"
+      },
+      {
+        "rel": "self",
+        "type": "application/atom+xml",
+        "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values?alt\u003djson"
+      }
+    ],
+    "author": [
+      {
+        "name": { "$t": "epicericegli" },
+        "email": { "$t": "epicericegli@gmail.com" }
+      }
+    ],
+    "openSearch$totalResults": { "$t": "14" },
+    "openSearch$startIndex": { "$t": "1" },
+    "entry": [
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cokwr"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "Row: 2" },
+        "content": { "type": "text", "$t": "location: City, _cpzh4: Canton" },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cokwr"
+          }
+        ],
+        "gsx$team": { "$t": "" },
+        "gsx$location": { "$t": "City" },
+        "gsx$_cpzh4": { "$t": "Canton" },
+        "gsx$arena": { "$t": "" },
+        "gsx$capacity": { "$t": "" },
+        "gsx$founded": { "$t": "" },
+        "gsx$joinedleague": { "$t": "" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cpzh4"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*HC Ajoie*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Porrentruy, _cpzh4: Jura, arena: Raiffeisen Arena, capacity: 4,600, founded: 1973, joinedleague: 2021"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cpzh4"
+          }
+        ],
+        "gsx$team": { "$t": "*HC Ajoie*" },
+        "gsx$location": { "$t": "Porrentruy" },
+        "gsx$_cpzh4": { "$t": "Jura" },
+        "gsx$arena": { "$t": "Raiffeisen Arena" },
+        "gsx$capacity": { "$t": "4,600" },
+        "gsx$founded": { "$t": "1973" },
+        "gsx$joinedleague": { "$t": "2021" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cre1l"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*HC Ambrì-Piotta*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Ambrì, _cpzh4: Ticino, arena: Nuova Valascia, capacity: 6,775, founded: 1937, joinedleague: 1985"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cre1l"
+          }
+        ],
+        "gsx$team": { "$t": "*HC Ambrì-Piotta*" },
+        "gsx$location": { "$t": "Ambrì" },
+        "gsx$_cpzh4": { "$t": "Ticino" },
+        "gsx$arena": { "$t": "Nuova Valascia" },
+        "gsx$capacity": { "$t": "6,775" },
+        "gsx$founded": { "$t": "1937" },
+        "gsx$joinedleague": { "$t": "1985" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/chk2m"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*SC Bern*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Bern, _cpzh4: Bern, arena: PostFinance Arena, capacity: 17,031, founded: 1931, joinedleague: 1986"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/chk2m"
+          }
+        ],
+        "gsx$team": { "$t": "*SC Bern*" },
+        "gsx$location": { "$t": "Bern" },
+        "gsx$_cpzh4": { "$t": "Bern" },
+        "gsx$arena": { "$t": "PostFinance Arena" },
+        "gsx$capacity": { "$t": "17,031" },
+        "gsx$founded": { "$t": "1931" },
+        "gsx$joinedleague": { "$t": "1986" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/ciyn3"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*EHC Biel*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Biel/Bienne, _cpzh4: Bern, arena: Tissot Arena, capacity: 6,521, founded: 1939, joinedleague: 2008"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/ciyn3"
+          }
+        ],
+        "gsx$team": { "$t": "*EHC Biel*" },
+        "gsx$location": { "$t": "Biel/Bienne" },
+        "gsx$_cpzh4": { "$t": "Bern" },
+        "gsx$arena": { "$t": "Tissot Arena" },
+        "gsx$capacity": { "$t": "6,521" },
+        "gsx$founded": { "$t": "1939" },
+        "gsx$joinedleague": { "$t": "2008" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/ckd7g"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*HC Davos*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Davos, _cpzh4: Grisons, arena: Vaillant Arena, capacity: 6,800, founded: 1921, joinedleague: 1993"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/ckd7g"
+          }
+        ],
+        "gsx$team": { "$t": "*HC Davos*" },
+        "gsx$location": { "$t": "Davos" },
+        "gsx$_cpzh4": { "$t": "Grisons" },
+        "gsx$arena": { "$t": "Vaillant Arena" },
+        "gsx$capacity": { "$t": "6,800" },
+        "gsx$founded": { "$t": "1921" },
+        "gsx$joinedleague": { "$t": "1993" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/clrrx"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*Fribourg-Gottéron*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Fribourg, _cpzh4: Fribourg, arena: BCF Arena, capacity: 8,934, founded: 1938, joinedleague: 1980"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/clrrx"
+          }
+        ],
+        "gsx$team": { "$t": "*Fribourg-Gottéron*" },
+        "gsx$location": { "$t": "Fribourg" },
+        "gsx$_cpzh4": { "$t": "Fribourg" },
+        "gsx$arena": { "$t": "BCF Arena" },
+        "gsx$capacity": { "$t": "8,934" },
+        "gsx$founded": { "$t": "1938" },
+        "gsx$joinedleague": { "$t": "1980" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cyevm"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*Genève-Servette HC*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Geneva, _cpzh4: Geneva, arena: Patinoire des Vernets, capacity: 7,135, founded: 1905, joinedleague: 2001"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cyevm"
+          }
+        ],
+        "gsx$team": { "$t": "*Genève-Servette HC*" },
+        "gsx$location": { "$t": "Geneva" },
+        "gsx$_cpzh4": { "$t": "Geneva" },
+        "gsx$arena": { "$t": "Patinoire des Vernets" },
+        "gsx$capacity": { "$t": "7,135" },
+        "gsx$founded": { "$t": "1905" },
+        "gsx$joinedleague": { "$t": "2001" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cztg3"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*Lausanne HC*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Lausanne, _cpzh4: Vaud, arena: Vaudoise Aréna, capacity: 9,600, founded: 1922, joinedleague: 2013"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cztg3"
+          }
+        ],
+        "gsx$team": { "$t": "*Lausanne HC*" },
+        "gsx$location": { "$t": "Lausanne" },
+        "gsx$_cpzh4": { "$t": "Vaud" },
+        "gsx$arena": { "$t": "Vaudoise Aréna" },
+        "gsx$capacity": { "$t": "9,600" },
+        "gsx$founded": { "$t": "1922" },
+        "gsx$joinedleague": { "$t": "2013" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/d180g"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*HC Lugano*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Lugano, _cpzh4: Ticino, arena: Cornèr Arena, capacity: 7,800, founded: 1941, joinedleague: 1981"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/d180g"
+          }
+        ],
+        "gsx$team": { "$t": "*HC Lugano*" },
+        "gsx$location": { "$t": "Lugano" },
+        "gsx$_cpzh4": { "$t": "Ticino" },
+        "gsx$arena": { "$t": "Cornèr Arena" },
+        "gsx$capacity": { "$t": "7,800" },
+        "gsx$founded": { "$t": "1941" },
+        "gsx$joinedleague": { "$t": "1981" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/d2mkx"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*SC Rapperswil-Jona Lakers*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Rapperswil-Jona, _cpzh4: St. Gallen, arena: St. Galler Kantonalbank Arena, capacity: 6,200, founded: 1945, joinedleague: 2018"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/d2mkx"
+          }
+        ],
+        "gsx$team": { "$t": "*SC Rapperswil-Jona Lakers*" },
+        "gsx$location": { "$t": "Rapperswil-Jona" },
+        "gsx$_cpzh4": { "$t": "St. Gallen" },
+        "gsx$arena": { "$t": "St. Galler Kantonalbank Arena" },
+        "gsx$capacity": { "$t": "6,200" },
+        "gsx$founded": { "$t": "1945" },
+        "gsx$joinedleague": { "$t": "2018" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cssly"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*SCL Tigers*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Langnau im Emmental, _cpzh4: Bern, arena: Ilfis Stadium, capacity: 6,000, founded: 1946, joinedleague: 2015"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cssly"
+          }
+        ],
+        "gsx$team": { "$t": "*SCL Tigers*" },
+        "gsx$location": { "$t": "Langnau im Emmental" },
+        "gsx$_cpzh4": { "$t": "Bern" },
+        "gsx$arena": { "$t": "Ilfis Stadium" },
+        "gsx$capacity": { "$t": "6,000" },
+        "gsx$founded": { "$t": "1946" },
+        "gsx$joinedleague": { "$t": "2015" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cu76f"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*ZSC Lions*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Zürich, _cpzh4: Zürich, arena: Hallenstadion, capacity: 11,200, founded: 1930, joinedleague: 1989"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cu76f"
+          }
+        ],
+        "gsx$team": { "$t": "*ZSC Lions*" },
+        "gsx$location": { "$t": "Zürich" },
+        "gsx$_cpzh4": { "$t": "Zürich" },
+        "gsx$arena": { "$t": "Hallenstadion" },
+        "gsx$capacity": { "$t": "11,200" },
+        "gsx$founded": { "$t": "1930" },
+        "gsx$joinedleague": { "$t": "1989" }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cvlqs"
+        },
+        "updated": { "$t": "2021-07-25T19:13:04.969Z" },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": { "type": "text", "$t": "*EV Zug*" },
+        "content": {
+          "type": "text",
+          "$t": "location: Zug, _cpzh4: Zug, arena: Bossard Arena, capacity: 7,200, founded: 1967, joinedleague: 1987"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1oa-AvdsZWaXzVbUIWRjzapVvYOZVcP2LL9qqsmOjHaM/1/public/values/cvlqs"
+          }
+        ],
+        "gsx$team": { "$t": "*EV Zug*" },
+        "gsx$location": { "$t": "Zug" },
+        "gsx$_cpzh4": { "$t": "Zug" },
+        "gsx$arena": { "$t": "Bossard Arena" },
+        "gsx$capacity": { "$t": "7,200" },
+        "gsx$founded": { "$t": "1967" },
+        "gsx$joinedleague": { "$t": "1987" }
+      }
+    ]
+  }
+}
