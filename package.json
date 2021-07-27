@@ -5,16 +5,23 @@
   "license": "MIT",
   "devDependencies": {
     "@types/chrome": "^0.0.147",
+    "@types/copy-webpack-plugin": "^8.0.1",
     "@types/fs-extra": "^9.0.12",
+    "@types/webpack": "^5.28.0",
+    "copy-webpack-plugin": "^9.0.1",
     "fs-extra": "^10.0.0",
     "globby": "^11.0.4",
+    "html-webpack-plugin": "^5.3.2",
+    "ts-loader": "^9.2.4",
     "ts-node": "^10.1.0",
     "tsconfig-paths": "^3.10.1",
-    "typescript": "^4.3.5"
+    "typescript": "^4.3.5",
+    "webpack": "^5.47.0",
+    "webpack-cli": "^4.7.2"
   },
   "scripts": {
     "deploy": "ts-node deploy.ts  && tsc --build",
     "build": "webpack",
-    "watch": "tsc --watch"
+    "watch": "webpack --watch --mode=development"
   }
 }

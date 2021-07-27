@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2015",
-    "module": "es2015",
+    "target": "es6",
+    "sourceMap": true,
     "lib": ["DOM", "ESNext"],
-    "outDir": "dist",
     "strict": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
