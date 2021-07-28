@@ -1,4 +1,4 @@
-import { extractJSON, getJSONEndpoint, createCheckbox } from '../util';
+import { extractJSON, getJSONEndpoint, insertCheckboxes } from '../util';
 import * as GST from 'google-spreadsheets-ts';
 import { getSheetNames, SheetNames } from '../scripts';
 
@@ -8,11 +8,8 @@ document.addEventListener('DOMContentLoaded', async _ => {
     currentWindow: true,
   });
 
-  const {
-    url: sheetUrl = '',
-    title: tabTitle = 'GoogleSheet',
-    id: tabId = 0,
-  } = activeTab;
+  const { url: sheetUrl = '', title = '', id: tabId = 0 } = activeTab;
+  const tabTitle = title.replace(' - Google Sheets', '');
 
   const sheetNamesRes = await chrome.scripting.executeScript({
     target: { tabId },
@@ -21,9 +18,9 @@ document.addEventListener('DOMContentLoaded', async _ => {
 
   const sheetNames = sheetNamesRes[0].result as SheetNames;
 
-  const optionsContainer = document.getElementById('sheet-opts-radio')!;
+  const optionsForm = document.getElementById('sheet-opts')!;
 
-  createCheckbox(optionsContainer, sheetNames);
+  insertCheckboxes(optionsForm, sheetNames);
 
   document.getElementById('button')!.addEventListener('click', async _ => {
     const form = document.forms.namedItem('sheet')!;
@@ -40,12 +37,20 @@ document.addEventListener('DOMContentLoaded', async _ => {
     try {
       const res = await fetch(api);
       const data: GST.RootObject = await res.json();
-      console.log('Success');
+      console.log(data);
       const json = extractJSON(data);
+      const jsonStr = JSON.stringify(json);
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      const downloadUrl = URL.createObjectURL(blob);
 
-      console.log(json);
+      chrome.downloads.download({
+        url: downloadUrl,
+        filename: tabTitle + '.json',
+      });
+
+      window.close();
     } catch (e) {
-      console.error('Sheet is not public');
+      console.error(e, 'Sheet is not public');
     }
   });
 });

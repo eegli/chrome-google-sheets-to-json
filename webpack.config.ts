@@ -39,6 +39,9 @@ const config: webpack.Configuration = {
   optimization: {
     minimize: false,
   },
+  experiments: {
+    topLevelAwait: true,
+  },
 };
 
 export default config;

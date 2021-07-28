@@ -3,7 +3,7 @@
   "description": "Build an Extension!",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["tabs", "downloads", "scripting", "activeTab", "background"],
+  "permissions": ["downloads", "scripting", "activeTab"],
   "host_permissions": [
     "https://docs.google.com/*",
     "https://spreadsheets.google.com/*"

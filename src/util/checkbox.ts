@@ -1,23 +1,29 @@
-export function createCheckbox(parent: HTMLElement, data: string[]): void {
-  data.forEach((el, idx) => {
+export function insertCheckboxes(parent: HTMLElement, data: string[]): void {
+  let idx = data.length - 1;
+  // Looping backwards through the sheet names and appending a new node before the first child of the parent
+
+  for (; idx >= 0; idx--) {
+    const el = data[idx];
     const container = document.createElement('div');
-
-    const radio = document.createElement('input');
-    radio.type = 'radio';
-    radio.id = el;
-    radio.value = el;
-    radio.name = 'sheetSelect';
-    if (idx === 0) radio.checked = true;
-
+    const input = document.createElement('input');
     const label = document.createElement('label');
+
+    input.type = 'radio';
+    input.name = 'sheetSelect';
+    input.value = el;
+    input.id = el;
+    if (idx === 0) input.checked = true;
+
     label.htmlFor = el;
+    label.innerHTML = el;
 
-    const text = document.createTextNode(el);
-    label.appendChild(text);
+    container.classList.add('form-check');
+    input.classList.add('form-check-input');
+    label.classList.add('form-check-label');
 
-    container.appendChild(radio);
-    container.appendChild(label);
+    container.append(input);
+    container.append(label);
 
-    parent.append(container);
-  });
+    parent.prepend(container);
+  }
 }
