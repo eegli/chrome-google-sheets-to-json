@@ -3,10 +3,13 @@ import * as GST from 'google-spreadsheets-ts';
 export function getJSONEndpoint(id: string, page: number): string {
   return `https://spreadsheets.google.com/feeds/list/${id}/${page}/public/values?alt=json`;
 }
-export function extractJSON(data: GST.RootObject): Record<string, any> {
-  const res = [];
+export function extractJSON(data: GST.RootObject): any[] {
+  const res: Record<string, any>[] = [];
 
   const rows = data.feed.entry;
+
+  // Empty Google Sheet
+  if (!rows) return res;
 
   for (const row of rows) {
     const formattedRow = {} as Record<string, any>;
@@ -20,6 +23,5 @@ export function extractJSON(data: GST.RootObject): Record<string, any> {
     res.push(formattedRow);
   }
 
-  console.log(data);
   return res;
 }

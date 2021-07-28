@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', async _ => {
         filename: tabTitle + '.json',
       });
 
-      window.close();
+      // window.close();
     } catch (e) {
       console.error(e, 'Sheet is not public');
     }

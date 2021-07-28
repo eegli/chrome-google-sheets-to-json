@@ -81,7 +81,7 @@ declare module 'google-spreadsheets-ts' {
     author: Author[];
     openSearch$totalResults: OpenSearchTotalResults;
     openSearch$startIndex: OpenSearchStartIndex;
-    entry: Entry[];
+    entry?: Entry[];
   }
 
   export interface RootObject {
