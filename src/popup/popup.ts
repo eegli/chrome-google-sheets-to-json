@@ -1,6 +1,7 @@
-import { extractJSON, getJSONEndpoint, insertCheckboxes } from '../util';
+import { extractJSON, getJSONEndpoint } from '../util/json';
 import * as GST from 'google-spreadsheets-ts';
-import { getSheetNames, SheetNames } from '../scripts';
+import { getSheetNames, SheetNames } from '../scripts/sheet';
+import { insertCheckboxes } from '../util/checkbox';
 
 document.addEventListener('DOMContentLoaded', async _ => {
   const [activeTab] = await chrome.tabs.query({

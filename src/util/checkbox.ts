@@ -1,6 +1,7 @@
 export function insertCheckboxes(parent: HTMLElement, data: string[]): void {
   let idx = data.length - 1;
-  // Looping backwards through the sheet names and appending a new node before the first child of the parent
+  // Looping backwards through the sheet names and appending a new
+  // node before the first child of the parent
 
   for (; idx >= 0; idx--) {
     const el = data[idx];
