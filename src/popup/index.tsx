@@ -3,6 +3,7 @@ import { useEffect, useState } from 'preact/hooks';
 import { sheetNamesContentScript } from '../scripts/sheet';
 import { downloadJSON } from '../util';
 import CheckBoxes from './checkbox';
+import Error from './error';
 
 export type Sheets = string[];
 
@@ -13,18 +14,16 @@ const Popup: FunctionalComponent = () => {
   const [isPublicDoc, setIsPublicDoc] = useState<boolean>(true);
 
   /* https://preactjs.com/guide/v10/typescript/#typing-events */
-  function handleSelectSheet(event: Event) {
-    event.preventDefault();
-    if (event.target instanceof HTMLInputElement) {
-      setSelectedSheet(event.target.value);
+  function handleSelectSheet(e: Event) {
+    e.preventDefault();
+    if (e.target instanceof HTMLInputElement) {
+      setSelectedSheet(e.target.value);
     }
   }
 
-  function handleSubmit(event: Event): void {
-    event.preventDefault();
-    if (event.target instanceof HTMLFormElement) {
-      handleDownload();
-    }
+  function handleSubmit(e: Event): void {
+    e.preventDefault();
+    handleDownload();
   }
 
   async function handleDownload(): Promise<void> {
@@ -40,7 +39,6 @@ const Popup: FunctionalComponent = () => {
       await downloadJSON({ url, page, fileName });
       window.close();
     } catch (e) {
-      console.log('Sheet is not public');
       console.error('An error occured', e);
       setIsPublicDoc(false);
     }
@@ -54,8 +52,6 @@ const Popup: FunctionalComponent = () => {
         currentWindow: true
       });
 
-      setActiveTab(tab);
-
       const sheets = await chrome.scripting.executeScript({
         target: { tabId: tab.id || 0 },
         func: sheetNamesContentScript
@@ -63,6 +59,7 @@ const Popup: FunctionalComponent = () => {
 
       const sheetNames: string[] = sheets[0].result;
 
+      setActiveTab(tab);
       setSheets(sheetNames);
       setSelectedSheet(sheetNames[0]);
     })();
@@ -86,26 +83,7 @@ const Popup: FunctionalComponent = () => {
             </form>
           </div>
         ) : (
-          <div className="alert alert-danger" role="alert">
-            <h4 className="alert-heading text-nowrap">Sheet is not public</h4>
-            <p>
-              It looks like the Sheet "{selectedSheet}" is not published. As of
-              now, this extension can only download Google Sheets that are
-              published to the web.
-            </p>
-            <hr />
-            <p className="mb-0">
-              Publish your Sheet and try again.
-              <br />
-              <a
-                href="https://support.google.com/docs/answer/183965"
-                rel="noopener noreferrer"
-                target="_blank"
-                class="alert-link">
-                How to publish a Google Sheet
-              </a>
-            </p>
-          </div>
+          <Error sheetName={selectedSheet} />
         )}
       </div>
     </main>
