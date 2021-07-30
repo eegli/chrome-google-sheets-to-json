@@ -1,4 +1,4 @@
-export function getSheetNames() {
+export function sheetNamesContentScript() {
   const sheets = document.getElementsByClassName('docs-sheet-tab-name');
 
   const sheetNames: string[] = [];

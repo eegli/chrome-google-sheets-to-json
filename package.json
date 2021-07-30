@@ -23,5 +23,8 @@
     "deploy": "ts-node deploy.ts  && tsc --build",
     "build": "webpack",
     "watch": "webpack --watch"
+  },
+  "dependencies": {
+    "preact": "^10.5.14"
   }
 }
