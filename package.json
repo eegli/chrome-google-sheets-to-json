@@ -31,8 +31,8 @@
     "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "build": "webpack",
-    "watch": "webpack --watch"
+    "build": "webpack --env prod",
+    "watch": "webpack --watch --env dev"
   },
   "dependencies": {
     "preact": "^10.5.14"
