@@ -10,21 +10,21 @@ type CheckBoxProps = {
 const CheckBoxes: FunctionalComponent<CheckBoxProps> = ({
   sheets,
   selectedSheet,
-  onChange,
+  onChange
 }) => {
   return (
     <div onChange={onChange}>
       {sheets.map(sheet => {
         return (
-          <div className='form-check'>
+          <div className="form-check">
             <input
-              className='form-check-input'
-              type='radio'
-              name='sheetSelect'
+              className="form-check-input"
+              type="radio"
+              name="sheetSelect"
               value={sheet}
               id={sheet}
               checked={sheet === selectedSheet}></input>
-            <label for={sheet} className='form-check-label'>
+            <label for={sheet} className="form-check-label">
               {sheet}
             </label>
           </div>

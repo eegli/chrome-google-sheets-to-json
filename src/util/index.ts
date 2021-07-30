@@ -20,7 +20,7 @@ export async function downloadJSON(opts: DownloadArgs): Promise<void> {
 
     chrome.downloads.download({
       url: downloadUrl,
-      filename: fileName + '.json',
+      filename: fileName + '.json'
     });
   } catch (e) {
     throw new Error('Error downloading JSON');

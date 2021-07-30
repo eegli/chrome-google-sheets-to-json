@@ -51,14 +51,14 @@ const Popup: FunctionalComponent = () => {
     (async () => {
       const [tab] = await chrome.tabs.query({
         active: true,
-        currentWindow: true,
+        currentWindow: true
       });
 
       setActiveTab(tab);
 
       const sheets = await chrome.scripting.executeScript({
         target: { tabId: tab.id || 0 },
-        func: sheetNamesContentScript,
+        func: sheetNamesContentScript
       });
 
       const sheetNames: string[] = sheets[0].result;
@@ -70,38 +70,38 @@ const Popup: FunctionalComponent = () => {
 
   return (
     <main>
-      <div className='container w-auto p-3'>
+      <div className="container w-auto p-3">
         {isPublicDoc ? (
           <div>
-            <h4 className='text-nowrap'>Choose Sheet</h4>
-            <form name='sheet' onSubmit={handleSubmit}>
+            <h4 className="text-nowrap">Choose Sheet</h4>
+            <form name="sheet" onSubmit={handleSubmit}>
               <CheckBoxes
                 sheets={sheets}
                 selectedSheet={selectedSheet}
                 onChange={handleSelectSheet}
               />
-              <button type='submit' className='btn btn-primary my-3'>
+              <button type="submit" className="btn btn-primary my-3">
                 Submit
               </button>
             </form>
           </div>
         ) : (
-          <div className='alert alert-danger' role='alert'>
-            <h4 className='alert-heading text-nowrap'>Sheet is not public</h4>
+          <div className="alert alert-danger" role="alert">
+            <h4 className="alert-heading text-nowrap">Sheet is not public</h4>
             <p>
               It looks like the Sheet "{selectedSheet}" is not published. As of
               now, this extension can only download Google Sheets that are
               published to the web.
             </p>
             <hr />
-            <p className='mb-0'>
+            <p className="mb-0">
               Publish your Sheet and try again.
               <br />
               <a
-                href='https://support.google.com/docs/answer/183965'
-                rel='noopener noreferrer'
-                target='_blank'
-                class='alert-link'>
+                href="https://support.google.com/docs/answer/183965"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="alert-link">
                 How to publish a Google Sheet
               </a>
             </p>
