@@ -9,7 +9,6 @@ type DownloadArgs = {
 export async function downloadJSON(opts: DownloadArgs): Promise<void> {
   const { url, page, fileName } = opts;
   const JSONendpoint = getJSONEndpoint(url, page);
-  console.log(JSONendpoint);
   try {
     // Fetch data, extract and prompt download
     const response = await fetch(JSONendpoint);
