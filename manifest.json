@@ -1,6 +1,7 @@
 {
   "name": "Google Sheets to JSON",
-  "description": "Build an Extension!",
+  "short_name": "JSON Sheets",
+  "description": "Easily download Google Sheets as a JSON file. Works with published Google Sheets only.",
   "version": "1.0",
   "manifest_version": 3,
   "permissions": ["downloads", "scripting", "activeTab", "declarativeContent"],
