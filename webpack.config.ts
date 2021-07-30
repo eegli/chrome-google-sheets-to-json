@@ -7,7 +7,7 @@ const config: webpack.Configuration = {
   mode: 'production',
   entry: {
     background: './src/background.ts',
-    popup: './src/popup/index.ts',
+    popup: './src/popup/index.tsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -24,7 +24,7 @@ const config: webpack.Configuration = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.tsx'],
   },
   plugins: [
     new CopyWebpackPlugin({
@@ -33,7 +33,7 @@ const config: webpack.Configuration = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: './src/assets',
+          from: './public/assets',
           to: './assets',
           globOptions: { ignore: ['**/*.psd'] },
         },
@@ -47,9 +47,6 @@ const config: webpack.Configuration = {
   ],
   optimization: {
     minimize: false,
-  },
-  experiments: {
-    topLevelAwait: true,
   },
 };
 

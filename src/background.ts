@@ -44,7 +44,7 @@ chrome.declarativeContent.onPageChanged.removeRules(async () => {
     },
   ]);
 }); */
-
+/* 
 chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
   if (info.status === 'complete') {
     console.log(info);
@@ -55,4 +55,4 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
       await chrome.action.setPopup({ tabId, popup: '' });
     }
   }
-});
+}); */

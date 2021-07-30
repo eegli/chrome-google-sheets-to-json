@@ -1,7 +1,7 @@
 import * as GST from 'google-spreadsheets-ts';
 
-export function getJSONEndpoint(googleUrl: string, page: number): string {
-  const [sheetId] = googleUrl.match('(?<=\\/d\\/)[^\\/]*') || [''];
+export function getJSONEndpoint(docsUrl: string, page: number): string {
+  const [sheetId] = docsUrl.match('(?<=\\/d\\/)[^\\/]*') || [''];
   return `https://spreadsheets.google.com/feeds/list/${sheetId}/${page}/public/values?alt=json`;
 }
 export function extractJSON(data: GST.RootObject): any[] {

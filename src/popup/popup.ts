@@ -1,6 +1,6 @@
 import { extractJSON, getJSONEndpoint } from '../util/json';
 import * as GST from 'google-spreadsheets-ts';
-import { getSheetNames } from '../scripts/sheet';
+import { sheetNamesContentScript } from '../scripts/sheetname';
 import { insertCheckboxes } from '../util/checkbox';
 
 document.addEventListener('DOMContentLoaded', async _ => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', async _ => {
   // Inject script to get the names of the sheets
   const sheetNamesRes = await chrome.scripting.executeScript({
     target: { tabId },
-    func: getSheetNames,
+    func: sheetNamesContentScript,
   });
 
   const sheetNames: string[] = sheetNamesRes[0].result;
