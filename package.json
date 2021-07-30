@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "@types/chrome": "^0.0.147",
+    "@types/chrome": "^0.0.149",
     "@types/copy-webpack-plugin": "^8.0.1",
     "@types/fs-extra": "^9.0.12",
     "@types/webpack": "^5.28.0",
@@ -22,6 +22,6 @@
   "scripts": {
     "deploy": "ts-node deploy.ts  && tsc --build",
     "build": "webpack",
-    "watch": "webpack --watch --mode=development"
+    "watch": "webpack --watch"
   }
 }

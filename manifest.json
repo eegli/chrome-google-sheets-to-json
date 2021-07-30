@@ -3,16 +3,28 @@
   "description": "Build an Extension!",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["downloads", "scripting", "activeTab"],
+  "permissions": ["downloads", "scripting", "activeTab", "declarativeContent"],
   "host_permissions": [
-    "https://docs.google.com/*",
+    "https://docs.google.com/spreadsheets/*",
     "https://spreadsheets.google.com/*"
   ],
   "action": {
-    "default_title": "Click to show an alert",
-    "default_popup": "popup.html"
+    "default_title": "Get JSON!",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icon-16.png",
+      "32": "assets/icon-32.png",
+      "48": "assets/icon-48.png",
+      "128": "assets/icon-128.png"
+    }
   },
   "background": {
     "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "assets/icon-16.png",
+    "32": "assets/icon-32.png",
+    "48": "assets/icon-48.png",
+    "128": "assets/icon-128.png"
   }
 }

@@ -7,7 +7,7 @@ const config: webpack.Configuration = {
   mode: 'production',
   entry: {
     background: './src/background.ts',
-    popup: './src/popup/popup.ts',
+    popup: './src/popup/index.ts',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -30,9 +30,18 @@ const config: webpack.Configuration = {
     new CopyWebpackPlugin({
       patterns: [{ from: 'manifest.json' }],
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: './src/assets',
+          to: './assets',
+          globOptions: { ignore: ['**/*.psd'] },
+        },
+      ],
+    }),
     new HtmlWebpackPlugin({
       filename: 'popup.html',
-      template: './src/popup/popup.html',
+      template: './public/popup.html',
       chunks: ['popup'],
     }),
   ],

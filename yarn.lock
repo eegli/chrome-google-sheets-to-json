@@ -44,14 +44,14 @@
   integrity sha512-509r2+yARFfHHE7T6Puu2jjkoycftovhXRqW328PDXTVGKihlb1P8Z9mMZH04ebyajfRY7dedfGynlrFHJUQCg==
 
 "@tsconfig/node16@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.1.tgz#a6ca6a9a0ff366af433f42f5f0e124794ff6b8f1"
-  integrity sha512-FTgBI767POY/lKNDNbIzgAX6miIDBs6NTCbdlDb8TrWovHsSvaVIZDlTqym29C6UqhzwcJx4CYr+AlrMywA0cA==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
+  integrity sha512-eZxlbI8GZscaGS7kkc/trHTT5xgrjH3/1n2JDwusC9iahPKWMRvRjJSAN5mCXviuTGQ/lHnhvv8Q1YTpnfz9gA==
 
-"@types/chrome@^0.0.147":
-  version "0.0.147"
-  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.147.tgz#c0658b59e0707fc1dc348bbd065d1ca3583133ee"
-  integrity sha512-HR9GdW3Waz+XC8xdPapv3RdSBvoJ1692cFLNnJ1kygEXeVy24aUw7zx4r5wC9JKepwy9SehI+8bNhQo0qDW6ew==
+"@types/chrome@^0.0.149":
+  version "0.0.149"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.149.tgz#da90f63ffab5571dad871db75f02a26fc7b3542d"
+  integrity sha512-JDhaXtMXqkRAzXbj4pOTciZytHSXmIOvlDDVLQdb++UdGP8fKCN4OZ0HgAq+ycFeIxzUiwlRaGmFD9mSiZRMnA==
   dependencies:
     "@types/filesystem" "*"
     "@types/har-format" "*"
@@ -121,9 +121,9 @@
   integrity sha512-YSBPTLTVm2e2OoQIDYx8HaeWJ5tTToLH67kXR7zYNGupXMEHa2++G8k+DczX2cFVgalypqtyZIcU19AFcmOpmg==
 
 "@types/node@*":
-  version "16.3.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.3.3.tgz#0c30adff37bbbc7a50eb9b58fae2a504d0d88038"
-  integrity sha512-8h7k1YgQKxKXWckzFCMfsIwn0Y61UK6tlD6y2lOb3hTOIMlK3t9/QwHOhc81TwU+RMf0As5fj7NPjroERCnejQ==
+  version "16.4.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.4.6.tgz#1734d119dfa8fede5606d35ae10f9fc9c84d889b"
+  integrity sha512-FKyawK3o5KL16AwbeFajen8G4K3mmqUrQsehn5wNKs8IzlKHE8TfnSmILXVMVziAEcnB23u1RCFU1NT6hSyr7Q==
 
 "@types/webpack@^5.28.0":
   version "5.28.0"
@@ -361,9 +361,9 @@ camel-case@^4.1.1:
     tslib "^2.0.3"
 
 caniuse-lite@^1.0.30001219:
-  version "1.0.30001247"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001247.tgz#105be7a8fb30cdd303275e769a9dfb87d4b3577a"
-  integrity sha512-4rS7co+7+AoOSPRPOPUt5/GdaqZc0EsUpWk66ofE3HJTAajUK2Ss2VwoNzVN69ghg8lYYlh0an0Iy4LIHHo9UQ==
+  version "1.0.30001248"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001248.tgz#26ab45e340f155ea5da2920dadb76a533cb8ebce"
+  integrity sha512-NwlQbJkxUFJ8nMErnGtT0QTM2TJ33xgz4KXJSMIrjXIbDVdaYueGyjOrLKRtJC+rTiWfi6j5cnZN1NBiSBJGNw==
 
 chalk@^4.1.0:
   version "4.1.1"
@@ -527,9 +527,9 @@ dot-case@^3.0.4:
     tslib "^2.0.3"
 
 electron-to-chromium@^1.3.723:
-  version "1.3.788"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.788.tgz#7a304c8ebb11d30916a1a1c1b4a9bad3983ef232"
-  integrity sha512-dbMIpX4E4/Gk4gzOh1GYS7ls1vGsByWKpIqLviJi1mSmSt5BvrWLLtSqpFE5BaC7Ef4NnI0GMaiddNX2Brw6zA==
+  version "1.3.790"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.790.tgz#5c569290929d92c8094fa08c79bc9393ca9e94e7"
+  integrity sha512-epMH/S2MkhBv+Y0+nHK8dC7bzmOaPwcmiYqt+VwxSUJLgPzkqZnGUEQ8eVhy5zGmgWm9tDDdXkHDzOEsVU979A==
 
 enhanced-resolve@^5.0.0, enhanced-resolve@^5.8.0:
   version "5.8.2"
@@ -1392,9 +1392,9 @@ webpack-merge@^5.7.3:
     wildcard "^2.0.0"
 
 webpack-sources@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.0.1.tgz#518cfabdbde3962f75bbecbacd11d88ab3205252"
-  integrity sha512-LkBxiXJ3tTuhLaS5gz6D6l77Et8mPWlghAe7bbnmi2PyN1CtkiL/YitR+I0pn9PtBC88Irqgg6F9dBJh8+sJRQ==
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.0.3.tgz#33c478e1f67bf5577d3ec5ced4bded0a06ec88d0"
+  integrity sha512-/Qgfp3i1FT2z/tpNj+d/ZeDTbdOWG5V6DdTjIvMLVhrhtpFxmMTZrGnEQEa0J7HF8Plls5kGa7TZ7IsvgnFdtA==
 
 webpack@^5, webpack@^5.1.0, webpack@^5.47.0:
   version "5.47.0"

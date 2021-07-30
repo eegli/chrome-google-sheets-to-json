@@ -9,22 +9,20 @@ document.addEventListener('DOMContentLoaded', async _ => {
     currentWindow: true,
   });
 
-  const { url = '', title = '', id: tabId = 0 } = activeTab;
+  const { url: tabUrl = '', title = '', id: tabId = 0 } = activeTab;
 
   // Title of the current tab
   const tabTitle = title.replace(' - Google Sheets', '');
-  // Extract Google Sheet ID
-  const sheetId = url.match('(?<=\\/d\\/)[^\\/]*')![0];
 
   // Inject script to get the names of the sheets
   const sheetNamesRes = await chrome.scripting.executeScript({
     target: { tabId },
-    function: getSheetNames,
+    func: getSheetNames,
   });
 
   const sheetNames: string[] = sheetNamesRes[0].result;
-
   const optionsForm = document.getElementById('sheet-opts')!;
+  const text = document.getElementById('title')!;
 
   // Insert checkboxes to select a sheet to download
   insertCheckboxes(optionsForm, sheetNames);
@@ -40,10 +38,22 @@ document.addEventListener('DOMContentLoaded', async _ => {
     const pageNumber = sheetNames.indexOf(selectedSheet) + 1;
 
     // Construct the final url
-    const JSONendpoint = getJSONEndpoint(sheetId, pageNumber);
+    const JSONendpoint = getJSONEndpoint(tabUrl, pageNumber);
+
+    console.log(JSONendpoint);
+
     try {
       // Fetch data, extract and prompt download
       const res = await fetch(JSONendpoint);
+      const text = await res.text();
+      const html = new DOMParser().parseFromString(text, 'text/html');
+      const errors = html.getElementsByClassName('errorMessage');
+      console.log(errors);
+
+      if (errors.length > 0) {
+        console.log('Sheet is not public');
+        return;
+      }
       const data: GST.RootObject = await res.json();
       const json = extractJSON(data);
       const jsonStr = JSON.stringify(json);
@@ -54,10 +64,9 @@ document.addEventListener('DOMContentLoaded', async _ => {
         url: downloadUrl,
         filename: tabTitle + ' - ' + selectedSheet + '.json',
       });
-
-      window.close();
+      // window.close();
     } catch (e) {
-      console.error(e, 'Sheet is not public');
+      console.error('An error occured', e);
     }
   });
 });
