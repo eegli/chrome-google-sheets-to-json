@@ -1,4 +1,4 @@
-import { FunctionalComponent, JSX } from 'preact';
+import { FunctionalComponent } from 'preact';
 import { Sheets } from '.';
 
 type CheckBoxProps = {

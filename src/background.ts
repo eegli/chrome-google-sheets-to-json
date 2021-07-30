@@ -44,7 +44,8 @@ chrome.declarativeContent.onPageChanged.removeRules(async () => {
     },
   ]);
 }); */
-/* 
+
+// Our serviceworker is only used for updating icons
 chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
   if (info.status === 'complete') {
     console.log(info);
@@ -55,4 +56,4 @@ chrome.tabs.onUpdated.addListener(async (tabId, info, tab) => {
       await chrome.action.setPopup({ tabId, popup: '' });
     }
   }
-}); */
+});
