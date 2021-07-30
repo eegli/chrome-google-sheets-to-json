@@ -1,6 +1,6 @@
-import { FunctionalComponent, render, JSX } from 'preact';
+import { FunctionalComponent, render } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
-import { sheetNamesContentScript } from '../scripts/sheetname';
+import { sheetNamesContentScript } from '../scripts/sheet';
 import { extractJSON, getJSONEndpoint } from '../util/json';
 import * as GST from 'google-spreadsheets-ts';
 import CheckBoxes from './checkbox';
@@ -33,8 +33,9 @@ const Popup: FunctionalComponent = () => {
     // Each sheet has its own url. The first sheet has number 1, the
     // second number 2, etc
     const page = sheets.indexOf(selectedSheet) + 1;
-    // Construct the final url
     const JSONendpoint = getJSONEndpoint(activeTab?.url || '', page);
+    console.log(JSONendpoint);
+
     // Download JSON
     try {
       // Fetch data, extract and prompt download

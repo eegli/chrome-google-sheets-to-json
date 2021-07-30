@@ -4,6 +4,7 @@ export function getJSONEndpoint(docsUrl: string, page: number): string {
   const [sheetId] = docsUrl.match('(?<=\\/d\\/)[^\\/]*') || [''];
   return `https://spreadsheets.google.com/feeds/list/${sheetId}/${page}/public/values?alt=json`;
 }
+
 export function extractJSON(data: GST.RootObject): any[] {
   const res: Record<string, any>[] = [];
 
