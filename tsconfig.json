@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "typings/**/*"],
+  "include": ["src/**/*", "test/**/*", "typings/**/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"
