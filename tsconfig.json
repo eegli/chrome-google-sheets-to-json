@@ -8,12 +8,13 @@
     "jsxImportSource": "preact",
     "strict": true,
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "typings/**/*"],
+  "include": ["src/**/*", "test/**/*", "typings/**/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"

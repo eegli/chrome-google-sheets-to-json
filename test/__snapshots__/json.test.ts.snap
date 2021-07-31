@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JSON parsing and utilities generates JSON from the raw response 1`] = `
+Array [
+  Object {
+    "age": "14",
+    "firstname": "Tinu",
+    "lastname": "Elejogun",
+  },
+  Object {
+    "age": "28",
+    "firstname": "Javier",
+    "lastname": "Zapata",
+  },
+  Object {
+    "age": "18",
+    "firstname": "Lily",
+    "lastname": "McGarrett",
+  },
+  Object {
+    "age": "22",
+    "firstname": "Olatunkbo",
+    "lastname": "Chijiaku",
+  },
+  Object {
+    "age": "22",
+    "firstname": "Adrienne",
+    "lastname": "Anthoula",
+  },
+  Object {
+    "age": "22",
+    "firstname": "Axelia",
+    "lastname": "Athanasios",
+  },
+  Object {
+    "age": "22",
+    "firstname": "Jon-Kabat",
+    "lastname": "Zinn",
+  },
+  Object {
+    "age": "15",
+    "firstname": "Thabang",
+    "lastname": "Mosoa",
+  },
+  Object {
+    "age": "11",
+    "firstname": "Kgaogelo",
+    "lastname": "Mosoa",
+  },
+]
+`;

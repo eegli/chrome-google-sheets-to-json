@@ -6,7 +6,7 @@ declare module 'google-spreadsheets-ts' {
   }
 
   export interface Updated {
-    $t: Date;
+    $t: string;
   }
 
   export interface Category {
@@ -55,18 +55,15 @@ declare module 'google-spreadsheets-ts' {
     $t: string;
   }
 
-  export interface GenericFieldValue {
-    $t: unknown;
-  }
-
-  export interface Entry extends Record<string, GenericFieldValue> {
-    id: Id;
+  export interface Entry {
+    id: Id2;
     updated: Updated;
     category: Category[];
     title: Title;
     content: Content;
     link: Link[];
-    gsx$_cpzh4: GsxCpzh4;
+    gsx$_cpzh4?: GsxCpzh4;
+    [key: string]: any;
   }
 
   export interface Feed {

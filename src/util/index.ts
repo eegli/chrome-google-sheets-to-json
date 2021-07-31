@@ -32,7 +32,7 @@ function getJSONEndpoint(docsUrl: string, page: number): string {
   return `https://spreadsheets.google.com/feeds/list/${sheetId}/${page}/public/values?alt=json`;
 }
 
-function extractJSON(data: GST.RootObject): any[] {
+export function extractJSON(data: GST.RootObject): any[] {
   const res: Record<string, any>[] = [];
 
   const rows = data.feed.entry;
