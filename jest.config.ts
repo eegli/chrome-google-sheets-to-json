@@ -10,10 +10,11 @@ import { defaults as tsjPreset } from 'ts-jest/presets';
 const config: InitialOptionsTsJest = {
   testEnvironment: 'node',
   preset: 'ts-jest',
-  roots: ['<rootDir>/test/'],
+  testMatch: ['test/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+  collectCoverageFrom: ['src/**'],
+  setupFilesAfterEnv: ['./jest.setup.ts'],
   transform: {
     ...tsjPreset.transform
-    // [...]
   }
 };
 

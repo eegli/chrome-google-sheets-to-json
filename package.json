@@ -25,6 +25,7 @@
     "globby": "^12.0.0",
     "html-webpack-plugin": "^5.3.2",
     "jest": "^27.0.6",
+    "jest-chrome": "^0.7.1",
     "ts-jest": "^27.0.4",
     "ts-loader": "^9.2.4",
     "ts-node": "^10.1.0",
@@ -35,6 +36,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:coverage": "jest --collectCoverage",
     "build": "webpack --env prod",
     "watch": "webpack --watch --env dev"
   },
