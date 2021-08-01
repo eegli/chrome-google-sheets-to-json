@@ -1,7 +1,7 @@
 import { FunctionalComponent, render } from 'preact';
 import { useEffect, useState } from 'preact/hooks';
 import { sheetNamesContentScript } from '../scripts/sheet';
-import { downloadJSON } from '../util';
+import { download, extractJSON, fetchDocsData, getEndpoint } from '../util';
 import CheckBoxes from './checkbox';
 import Error from './error';
 
@@ -34,9 +34,15 @@ const Popup: FunctionalComponent = () => {
     const fileName =
       activeTab?.title?.replace(' - Google Sheets', '') || 'data';
 
+    const JSONapi = getEndpoint(url, page);
     // Download JSON
     try {
-      await downloadJSON({ url, page, fileName });
+      const sheetData = await fetchDocsData(JSONapi);
+      const json = extractJSON(sheetData);
+      download({
+        data: json,
+        fileName
+      });
       window.close();
     } catch (e) {
       console.error('An error occured', e);

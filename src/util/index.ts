@@ -1,33 +1,34 @@
 import * as GST from 'google-spreadsheets-ts';
 
 type DownloadArgs = {
-  url: string;
-  page: number;
   fileName: string;
+  data: any;
 };
 
-export async function downloadJSON(opts: DownloadArgs): Promise<void> {
-  const { url, page, fileName } = opts;
-  const JSONendpoint = getJSONEndpoint(url, page);
+export function download(opts: DownloadArgs) {
+  const { fileName, data } = opts;
+  const str = JSON.stringify(data);
+  const blob = new Blob([str], { type: 'application/json' });
+  const downloadUrl = URL.createObjectURL(blob);
+
+  chrome.downloads.download({
+    url: downloadUrl,
+    filename: fileName + '.json'
+  });
+}
+
+export async function fetchDocsData(url: string): Promise<GST.RootObject> {
   try {
     // Fetch data, extract and prompt download
-    const response = await fetch(JSONendpoint);
+    const response = await fetch(url);
     const data: GST.RootObject = await response.json();
-    const json = extractJSON(data);
-    const jsonStr = JSON.stringify(json);
-    const blob = new Blob([jsonStr], { type: 'application/json' });
-    const downloadUrl = URL.createObjectURL(blob);
-
-    chrome.downloads.download({
-      url: downloadUrl,
-      filename: fileName + '.json'
-    });
+    return data;
   } catch (e) {
     throw new Error('Error downloading JSON');
   }
 }
 
-function getJSONEndpoint(docsUrl: string, page: number): string {
+export function getEndpoint(docsUrl: string, page: number): string {
   const [sheetId] = docsUrl.match('(?<=\\/d\\/)[^\\/]*') || [''];
   return `https://spreadsheets.google.com/feeds/list/${sheetId}/${page}/public/values?alt=json`;
 }
