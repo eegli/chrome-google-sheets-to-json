@@ -21,10 +21,29 @@
  *
  */
 
-export default function (...args: string[]) {
+export default function mockFor<
+  T extends keyof typeof chrome,
+  K extends keyof typeof chrome[T]
+>(m1: T, m2: K): jest.Mock {
   const mockFn = jest.fn();
 
-  function deepRecreate() {
+  function deepRecreate(): void {
+    const methods = [m1, m2].reduceRight((obj, next, idx) => {
+      if (idx === 1) {
+        return { [next]: mockFn };
+      }
+      return { [next]: obj };
+    }, {});
+    global.chrome = { ...global.chrome, ...methods };
+  }
+  deepRecreate();
+  return mockFn;
+}
+
+/* export default function (...args: string[]): jest.Mock {
+  const mockFn = jest.fn();
+
+  function deepRecreate(): void {
     const last = args.length - 1;
     const methods = args.reduceRight((obj, next, idx) => {
       if (idx === last) {
@@ -36,4 +55,4 @@ export default function (...args: string[]) {
   }
   deepRecreate();
   return mockFn;
-}
+} */
