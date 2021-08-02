@@ -2,57 +2,60 @@
 'jest-chrome */
 
 /**
- * Takes an arbitrary amount of  strings as the path to mocked chrome
- * method. Example:
+ * Takes a path to a method of the Chrome API. Properties are accessed
+ * via dot notation. Example:
  * ```
- * const scriptMock = mockForV3('scripts', 'execute')
+ * const scriptMock = mockForV3('scripting.executeScript')
  * ```
  * This will produce
  * ```
- * global.chrome.scripts.execute = jest.fn()
+ * global.chrome.scripting.executeScript = jest.fn()
  * ```
- * The function returns a mock instance with all the Jest methods
- * available. You can add your custom implementation as usual.
+ * The returned mock function above will mock
+ * `scripting.executeScript`. Each returned mock function has all the
+ * Jest methods available and you can add your custom implementations
+ * as usual.
  * ```
  * scriptMock.mockImplementation(() => true)
  * ```
- * @param args (string, string, string, ...)
+ * @param args string
  * @returns jest.Mock - Generic jest mock function
  *
  */
-
-export default function mockFor<
-  T extends keyof typeof chrome,
-  K extends keyof typeof chrome[T]
->(m1: T, m2: K): jest.Mock {
+export default function <T extends Paths<Chrome>>(path: T): jest.Mock {
   const mockFn = jest.fn();
-
+  const keys = path.split('.');
   function deepRecreate(): void {
-    const methods = [m1, m2].reduceRight((obj, next, idx) => {
-      if (idx === 1) {
+    const methods = keys.reduceRight((obj, next, idx) => {
+      if (idx === keys.length - 1) {
         return { [next]: mockFn };
       }
       return { [next]: obj };
     }, {});
-    global.chrome = { ...global.chrome, ...methods };
+
+    Object.assign(global.chrome, methods);
   }
   deepRecreate();
   return mockFn;
 }
 
-/* export default function (...args: string[]): jest.Mock {
-  const mockFn = jest.fn();
+// Cast the namespace to use in a type context
+type Chrome = typeof chrome;
 
-  function deepRecreate(): void {
-    const last = args.length - 1;
-    const methods = args.reduceRight((obj, next, idx) => {
-      if (idx === last) {
-        return { [next]: mockFn };
-      }
-      return { [next]: obj };
-    }, {});
-    Object.assign(global.chrome, methods);
-  }
-  deepRecreate();
-  return mockFn;
-} */
+type Join<K, P> = K extends string | number
+  ? P extends string | number
+    ? `${K}${'' extends P ? '' : '.'}${P}`
+    : never
+  : never;
+
+type Prev = [never, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ...0[]];
+
+type Paths<T, D extends number = 10> = [D] extends [never]
+  ? never
+  : T extends object
+  ? {
+      [K in keyof T]-?: K extends string | number
+        ? `${K}` | Join<K, Paths<T[K], Prev[D]>>
+        : never;
+    }[keyof T]
+  : '';

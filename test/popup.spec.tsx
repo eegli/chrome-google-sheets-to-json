@@ -14,10 +14,10 @@ import Popup from '../src/popup/popup';
 // If scripting.executeScript needs to be mocked multiple times in a
 // test, simply overwrite it with a different mock function - in
 // between test files, it will be reset anyway
-const scriptMock = mockForV3('scripting', 'executeScript');
+const scriptMock = mockForV3('scripting.executeScript');
 scriptMock.mockResolvedValueOnce([{ result: ['sheet 1'] }]);
 
-const tabsMock = mockForV3('tabs', 'query');
+const tabsMock = mockForV3('tabs.query');
 tabsMock.mockResolvedValue([{}]);
 
 describe('Popup', () => {
