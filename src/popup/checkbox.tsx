@@ -1,5 +1,5 @@
 import { FunctionalComponent } from 'preact';
-import { Sheets } from '.';
+import { Sheets } from './popup';
 
 type CheckBoxProps = {
   sheets: Sheets;

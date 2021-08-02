@@ -4,24 +4,20 @@
 
 import googleJSON from './data/sample-spreadsheet';
 import { download, extractJSON, getEndpoint, fetchDocsData } from '../src/util';
+import { chrome } from 'jest-chrome';
+import { mocked } from 'ts-jest/utils';
 
-const mockedRes = { hello: 'jest' };
-
-const mockedFetch = jest.fn().mockResolvedValueOnce({
-  json: async () => Promise.resolve(mockedRes)
-} as Response);
-
-window.fetch = mockedFetch;
-
-describe('Fetching Docs data', () => {
+describe('API and JSON utilities', () => {
   it('fetches Google Docs data', async () => {
-    const res = await fetchDocsData('test');
-    expect(mockedFetch).toHaveBeenCalledTimes(1);
-    expect(res).toEqual(mockedRes);
-  });
-});
+    const mockedFetch = jest.fn().mockResolvedValueOnce({
+      json: async () => Promise.resolve({ name: 'jest' })
+    } as Response);
 
-describe('JSON parsing and utilities', () => {
+    global.fetch = mockedFetch;
+    await fetchDocsData('test');
+    expect(mockedFetch).toHaveBeenCalledTimes(1);
+  });
+
   it('generates JSON from the raw response', () => {
     const json = extractJSON(googleJSON);
     expect(json).toMatchSnapshot();
@@ -66,8 +62,9 @@ describe('JSON parsing and utilities', () => {
 
   it('prompts a download', () => {
     const downloadSpy = jest.fn();
-    window.URL.createObjectURL = jest.fn();
-    chrome.downloads.download = jest.fn(downloadSpy);
+    URL.createObjectURL = jest.fn();
+
+    chrome.downloads.download.mockImplementation(downloadSpy);
 
     download({ fileName: 'test', data: {} });
 

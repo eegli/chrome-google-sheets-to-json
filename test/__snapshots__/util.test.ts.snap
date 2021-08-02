@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`JSON parsing and utilities generates JSON from the raw response 1`] = `
+exports[`API and JSON utilities generates JSON from the raw response 1`] = `
 Array [
   Object {
     "age": "14",

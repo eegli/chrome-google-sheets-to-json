@@ -1,16 +1,16 @@
-import { chrome } from 'jest-chrome';
+describe('Test chrome', () => {
+  it('tests', () => {
+    const example = (url: string) => {
+      chrome.downloads.download({
+        url: url,
+        filename: 'test.json'
+      });
+    };
+    const downloadSpy = jest.fn();
 
-function example(url: string): void {
-  chrome.downloads.download({
-    url: url,
-    filename: 'test.json'
+    chrome.downloads.download = jest.fn(downloadSpy);
+
+    example('test2');
+    expect(downloadSpy).toHaveBeenCalledTimes(1);
   });
-}
-
-test('Download', () => {
-  const downloadSpy = jest.fn();
-
-  chrome.downloads.download.mockImplementation(downloadSpy);
-
-  example('test');
 });
