@@ -21,7 +21,7 @@
  *
  */
 
-export function mockForV3(...args: string[]) {
+export default function (...args: string[]) {
   const mockFn = jest.fn();
 
   function deepRecreate() {

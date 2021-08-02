@@ -14,7 +14,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/**/*", "test/**/*", "typings/**/*", "setup.ts"],
+  "include": ["src/**/*", "test/**/*", "typings/**/*", "jest.setup.ts"],
   "ts-node": {
     "compilerOptions": {
       "module": "commonjs"

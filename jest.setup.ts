@@ -3,4 +3,6 @@
 // testing environment immediately before executing the test code
 // itself.
 
+global.mockForV3 = require('./test-helper').default;
+
 Object.assign(global, require('jest-chrome'));

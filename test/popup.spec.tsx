@@ -10,7 +10,6 @@ import {
   waitFor
 } from '@testing-library/preact';
 import Popup from '../src/popup/popup';
-import { mockForV3 } from './utils/inject-missing';
 
 // If scripting.executeScript needs to be mocked multiple times in a
 // test, simply overwrite it with a different mock function - in
