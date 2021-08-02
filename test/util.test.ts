@@ -4,8 +4,8 @@
 
 import googleJSON from './data/sample-spreadsheet';
 import { download, extractJSON, getEndpoint, fetchDocsData } from '../src/util';
+// Import for Intellisense and linting
 import { chrome } from 'jest-chrome';
-import { mocked } from 'ts-jest/utils';
 
 describe('API and JSON utilities', () => {
   it('fetches Google Docs data', async () => {
@@ -61,13 +61,9 @@ describe('API and JSON utilities', () => {
   });
 
   it('prompts a download', () => {
-    const downloadSpy = jest.fn();
     URL.createObjectURL = jest.fn();
 
-    chrome.downloads.download.mockImplementation(downloadSpy);
-
     download({ fileName: 'test', data: {} });
-
-    expect(downloadSpy).toHaveBeenCalledTimes(1);
+    expect(chrome.downloads.download).toHaveBeenCalledTimes(1);
   });
 });

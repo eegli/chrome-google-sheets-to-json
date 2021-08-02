@@ -12,13 +12,25 @@ import {
 import Popup from '../src/popup/popup';
 import { chrome } from 'jest-chrome';
 
+beforeAll(() => {
+  const _chrome = {
+    scripting: {
+      executeScript: async () => {
+        return [{ result: ['sheet 1'] }];
+      }
+    }
+  };
+  //@ts-ignore
+  global.chrome = { ...global.chrome, ..._chrome };
+});
+
 chrome.tabs.query.mockResolvedValue([
   {
     title: 'jest',
     url: 'https://google.com',
     id: 1
-  } as chrome.tabs.Tab
-]);
+  }
+] as chrome.tabs.Tab[]);
 
 describe('Popup', () => {
   it('should be able to sign in', async () => {

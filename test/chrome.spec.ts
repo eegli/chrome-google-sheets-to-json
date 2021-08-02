@@ -1,4 +1,7 @@
-describe('Test chrome', () => {
+// Import for Intellisense and linting
+import { chrome } from 'jest-chrome';
+
+describe('Chrome Jest', () => {
   it('tests', () => {
     const example = (url: string) => {
       chrome.downloads.download({
@@ -8,8 +11,7 @@ describe('Test chrome', () => {
     };
     const downloadSpy = jest.fn();
 
-    chrome.downloads.download = jest.fn(downloadSpy);
-
+    chrome.downloads.download.mockImplementation(downloadSpy);
     example('test2');
     expect(downloadSpy).toHaveBeenCalledTimes(1);
   });

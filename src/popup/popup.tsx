@@ -50,7 +50,7 @@ const Popup: FunctionalComponent = () => {
     }
   }
 
-  /*   // https://dev.to/stlnick/useeffect-and-async-4da8
+  // https://dev.to/stlnick/useeffect-and-async-4da8
   useEffect(() => {
     (async () => {
       const [tab] = await chrome.tabs.query({
@@ -69,7 +69,7 @@ const Popup: FunctionalComponent = () => {
       setSheets(sheetNames);
       setSelectedSheet(sheetNames[0]);
     })();
-  }, []); */
+  }, []);
 
   return (
     <main>
