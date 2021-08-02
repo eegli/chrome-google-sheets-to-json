@@ -12,17 +12,15 @@ import {
 import Popup from '../src/popup/popup';
 import { chrome } from 'jest-chrome';
 
-beforeAll(() => {
-  const _chrome = {
-    scripting: {
-      executeScript: async () => {
-        return [{ result: ['sheet 1'] }];
-      }
+const _chrome = {
+  scripting: {
+    executeScript: async () => {
+      return [{ result: ['sheet 1'] }];
     }
-  };
-  //@ts-ignore
-  global.chrome = { ...global.chrome, ..._chrome };
-});
+  }
+};
+//@ts-ignore
+global.chrome = { ...global.chrome, ..._chrome };
 
 chrome.tabs.query.mockResolvedValue([
   {
