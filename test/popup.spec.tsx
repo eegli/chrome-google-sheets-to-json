@@ -10,7 +10,6 @@ import {
   waitFor
 } from '@testing-library/preact';
 import Popup from '../src/popup/popup';
-import { chrome } from 'jest-chrome';
 import { mockForV3 } from './utils/inject-missing';
 
 // If scripting.executeScript needs to be mocked multiple times in a
@@ -19,13 +18,8 @@ import { mockForV3 } from './utils/inject-missing';
 const scriptMock = mockForV3('scripting', 'executeScript');
 scriptMock.mockResolvedValueOnce([{ result: ['sheet 1'] }]);
 
-chrome.tabs.query.mockResolvedValue([
-  {
-    title: 'jest',
-    url: 'https://google.com',
-    id: 1
-  }
-] as chrome.tabs.Tab[]);
+const tabsMock = mockForV3('tabs', 'query');
+tabsMock.mockResolvedValue([{}]);
 
 describe('Popup', () => {
   it('should be able to sign in', async () => {

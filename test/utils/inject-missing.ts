@@ -4,16 +4,13 @@
 /**
  * Takes an arbitrary amount of  strings as the path to mocked chrome
  * method. Example:
- *
  * ```
  * const scriptMock = mockForV3('scripts', 'execute')
  * ```
- *
  * This will produce
  * ```
  * global.chrome.scripts.execute = jest.fn()
  * ```
- *
  * The function returns a mock instance with all the Jest methods
  * available. You can add your custom implementation as usual.
  * ```
