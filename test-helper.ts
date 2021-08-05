@@ -4,7 +4,7 @@ type Join<K, P> = K extends string | number
     : never
   : never;
 
-type Prev = [never, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ...0[]];
+type Prev = [never, 0, 1, 2, 3, 4, ...0[]];
 
 type Paths<T, D extends number = 10> = [D] extends [never]
   ? never
@@ -40,7 +40,7 @@ type Paths<T, D extends number = 10> = [D] extends [never]
  * @returns jest.Mock - Generic jest mock function
  *
  */
-export default function <T extends Paths<typeof chrome>>(path: T) {
+export default function (path: Paths<typeof chrome>) {
   const mockFn = jest.fn();
   const keys = path.split('.');
 

@@ -1,7 +1,6 @@
 async function getTabGroup() {
   const { color } = await chrome.tabGroups.get(1);
-  if (!color) throw new Error('No color!');
-  return color;
+  return color || 'red';
 }
 
 describe('Sample test', () => {
@@ -16,8 +15,7 @@ describe('Sample test', () => {
       id: 1,
       windowId: 1
     }));
-
-    await expect(getTabGroup()).rejects.toThrow();
+    await expect(getTabGroup()).resolves.toEqual<string>('red');
   });
 
   it('works with strong implementation', async () => {
@@ -34,6 +32,6 @@ describe('Sample test', () => {
       windowId: 1
     }));
 
-    await expect(getTabGroup()).resolves.toBe('blue');
+    await expect(getTabGroup()).resolves.toEqual<string>('blue');
   });
 });

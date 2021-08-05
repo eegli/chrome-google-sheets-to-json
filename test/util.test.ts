@@ -7,13 +7,23 @@ import { download, extractJSON, getEndpoint, fetchDocsData } from '../src/util';
 // Import for Intellisense and linting
 import { chrome } from 'jest-chrome';
 
+const mockedFetch = jest.fn().mockResolvedValueOnce({
+  json: async () => Promise.resolve({ name: 'jest' })
+} as Response);
+
+global.fetch = mockedFetch;
+
+const mockedGetEndpoint = jest.fn(getEndpoint);
+
+URL.createObjectURL = jest.fn();
+
+beforeAll(() => {
+  mockedFetch.mockClear();
+  mockedGetEndpoint.mockClear();
+});
+
 describe('API and JSON utilities', () => {
   it('fetches Google Docs data', async () => {
-    const mockedFetch = jest.fn().mockResolvedValueOnce({
-      json: async () => Promise.resolve({ name: 'jest' })
-    } as Response);
-
-    global.fetch = mockedFetch;
     await fetchDocsData('test');
     expect(mockedFetch).toHaveBeenCalledTimes(1);
   });
@@ -34,7 +44,7 @@ describe('API and JSON utilities', () => {
         '11CVwVoQyn9a2AgztdDf-EZHS0aHxFiHoZu_aFr1PDXk' +
         '/edit#gid=771262429'
     ];
-    const mockedGetEndpoint = jest.fn(getEndpoint);
+
     urls.forEach(url => mockedGetEndpoint(url, 1));
 
     expect(mockedGetEndpoint.mock.results[0].value).toEqual(
@@ -61,8 +71,6 @@ describe('API and JSON utilities', () => {
   });
 
   it('prompts a download', () => {
-    URL.createObjectURL = jest.fn();
-
     download({ fileName: 'test', data: {} });
     expect(chrome.downloads.download).toHaveBeenCalledTimes(1);
   });
